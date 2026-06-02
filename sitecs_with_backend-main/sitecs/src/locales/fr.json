@@ -1,0 +1,268 @@
+{
+  "hero": {
+    "badge": "Leader en Solutions Industrielles Africaines",
+    "title": "GroupTama : Votre Partenaire Global en Innovation Industrielle",
+    "subtitle": "Solutions intégrées de la conception à la livraison — pour un avenir industriel durable, innovant et ambitieux.",
+    "cta_contact": "Contactez-nous",
+    "cta_projects": "Nos Réalisations",
+    "stats": {
+      "years": "Années d'exp.",
+      "projects": "Projets livrés",
+      "experts": "Experts",
+      "countries": "Pays couverts"
+    },
+    "badges": {
+      "btp": "Tama BTP",
+      "transport": "Tama Transport",
+      "industry": "Tama Industry"
+    },
+    "scroll": "Défiler"
+  },
+
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "activities": "Activités",
+    "projects": "Projets",
+    "contact": "Contact",
+    "request_quote": "Demande de Devis"
+  },
+
+  "brand": {
+    "tagline": "Innovation Industrielle"
+  },
+
+  "projects": {
+    "section_tag": "Notre portfolio",
+    "title": "Nos Réalisations",
+    "subtitle": "Des projets ambitieux menés à bien grâce à notre savoir-faire et notre engagement envers l'excellence.",
+    "cta_all_projects": "Tous les projets",
+    "action_view_more": "Voir Plus",
+    "cards": {
+      "1": {
+        "cat": "BTP",
+        "title": "Projets de Construction",
+        "location": "Afrique de l'Ouest",
+        "desc": "Réalisation de bâtiments résidentiels, commerciaux et industriels avec matériaux durables et techniques modernes."
+      },
+      "2": {
+        "cat": "Industrie",
+        "title": "Installations Industrielles",
+        "location": "Afrique Centrale",
+        "desc": "Déploiement d'équipements industriels lourds, services pétroliers, systèmes de contrôle et maintenance."
+      },
+      "3": {
+        "cat": "Énergie",
+        "title": "Solutions Énergétiques",
+        "location": "Afrique",
+        "desc": "Installation de panneaux solaires, systèmes hybrides et solutions d'énergie verte pour l'autonomie durable."
+      }
+    }
+  },
+
+  "activities": {
+    "section_tag": "Nos Domaines d'Excellence",
+    "title": "Nos Activités",
+    "subtitle": "GroupTama opère dans cinq secteurs industriels clés pour transformer les projets en réalité et propulser votre entreprise vers le succès.",
+    "cta_view_all": "Voir toutes les activités",
+    "action_view_more": "En savoir plus",
+    "cards": {
+      "btp": {
+        "title": "Tama BTP",
+        "sub": "Construction, génie civil et infrastructure :",
+        "points": [
+          "Construction de routes et autoroutes",
+          "Bâtiments industriels et résidentiels",
+          "Structures métalliques et charpentes",
+          "Génie civil et travaux publics",
+          "Réhabilitation d'infrastructures"
+        ],
+        "conclusion": "De la conception à la livraison finale, nous construisons l'avenir."
+      },
+
+      "transport": {
+        "title": "Tama Transport",
+        "sub": "Solutions logistiques et transport multimodal :",
+        "sections": [
+          {
+            "title": "Transport terrestre",
+            "points": [
+              "Camions lourds et convois exceptionnels",
+              "Transport de matériel industriel lourd",
+              "Logistique spécialisée"
+            ]
+          },
+          {
+            "title": "Transport maritime et naval",
+            "points": [
+              "Affrètement de navires",
+              "Affrètement de barges",
+              "Logistique offshore"
+            ]
+          },
+          {
+            "title": "Location d'équipements",
+            "points": [
+              "Engins de transport",
+              "Matériel logistique spécialisé"
+            ]
+          }
+        ],
+        "conclusion": "Rapidité, sécurité et optimisation des coûts garanties."
+      },
+
+      "industry": {
+        "title": "Tama Industry (Oil Services)",
+        "sub": "Services industriels et pétroliers :",
+        "points": [
+          "Soudure industrielle (structures lourdes, pipelines)",
+          "Fabrication de plateformes métalliques",
+          "Peinture industrielle anticorrosion",
+          "Travaux sur tubes et équipements pétroliers",
+          "Services offshore et onshore"
+        ],
+        "conclusion": "Expertise reconnue et standards internationaux pour vos projets critiques."
+      },
+
+      "energy": {
+        "title": "Tama Energy",
+        "sub": "Solutions énergétiques intégrées :",
+        "sections": [
+          {
+            "title": "Énergie traditionnelle",
+            "points": [
+              "Installation d'unités énergétiques",
+              "Services para-pétroliers",
+              "Maintenance et exploitation"
+            ]
+          },
+          {
+            "title": "Énergies renouvelables",
+            "points": [
+              "Solutions solaires photovoltaïques",
+              "Parcs éoliens",
+              "Hybridation énergétique",
+              "Optimisation énergétique"
+            ]
+          }
+        ],
+        "conclusion": "Innovation durable adaptée aux besoins africains."
+      },
+
+      "tech": {
+        "title": "Tama Tech",
+        "sub": "Solutions technologiques et modernisation :",
+        "points": [
+          "Technologie et automatisation industrielle",
+          "Réhabilitation d'infrastructures technologiques",
+          "Modernisation d'équipements",
+          "Ingénierie, conseil et intégration IT",
+          "Maintenance et support technique"
+        ],
+        "conclusion": "Nous améliorons la performance et la durabilité de vos installations."
+      }
+    }
+  },
+
+  "footer": {
+    "description": "GroupTama est un groupe industriel intégré spécialisé dans le BTP, le transport, les services industriels, l'énergie et la technologie en Afrique.",
+    "quick_links": "Liens Rapides",
+    "services_title": "Nos Services",
+    "contact": "Contact",
+    "services": {
+      "1": "Tama BTP",
+      "2": "Tama Transport",
+      "3": "Tama Industry",
+      "4": "Tama Energy",
+      "5": "Tama Tech"
+    },
+    "copyright": "Tous droits réservés.",
+    "tagline": "Conçu avec excellence pour l'industrie africaine."
+  },
+
+  "contact": {
+    "section_tag": "Nous Joindre",
+    "title": "Contactez GroupTama",
+    "subtitle": "Notre équipe est prête à étudier votre projet et vous proposer la meilleure solution innovante.",
+    "info_title": "Informations de Contact",
+    "info_description": "GroupTama est un groupe industriel intégré spécialisé dans le BTP, le transport, les services industriels, l'énergie et la technologie.",
+    "follow_us": "Suivez-nous",
+    "map_location": "Afrique",
+
+    "phones": [
+      "+240 222 31 82 82",
+      "+212 601 28 19 50"
+    ],
+
+    "email": "contact@grouptama.com",
+
+    "details": {
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse"
+    },
+
+    "validation": {
+      "name_required": "Le nom est obligatoire.",
+      "email_required": "L'email est obligatoire.",
+      "email_invalid": "Email invalide.",
+      "message_required": "Le message est obligatoire."
+    },
+
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "message": "Message",
+      "header": "Envoyez-nous un message",
+      "subheader": "Nous vous répondrons dans les 24 heures.",
+      "placeholder_name": "Jean Dupont",
+      "placeholder_email": "jean@exemple.com",
+      "placeholder_phone": "+240 222 000 000",
+      "placeholder_message": "Décrivez votre projet ou posez votre question…",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi."
+    }
+  },
+
+  "about": {
+    "section_tag": "Qui Sommes-Nous",
+    "title": "À Propos de GroupTama",
+    "subtitle": "GroupTama allie expertise locale et standards internationaux pour des projets d'excellence.",
+    "content": "Fondé sur des principes de qualité, d'innovation et de durabilité, GroupTama est un leader reconnu des solutions industrielles intégrées en Afrique.",
+    "mission": "Notre mission est de transformer les défis industriels en opportunités de croissance."
+  },
+
+  "why_choose_us": {
+    "section_tag": "Pourquoi GroupTama",
+    "title": "Nos Avantages Compétitifs",
+    "cards": {
+      "1": {
+        "title": "Expertise Reconnue",
+        "description": "15+ années d'expérience dans les secteurs industriels clés"
+      },
+      "2": {
+        "title": "Équipes Qualifiées",
+        "description": "50+ experts certifiés et passionnés"
+      },
+      "3": {
+        "title": "Solutions Intégrées",
+        "description": "Une gamme complète de services sous un seul groupe"
+      },
+      "4": {
+        "title": "Standards Internationaux",
+        "description": "Certification ISO et normes mondiales"
+      },
+      "5": {
+        "title": "Innovation Continue",
+        "description": "Technologies modernes et processus optimisés"
+      },
+      "6": {
+        "title": "Support Durable",
+        "description": "Engagement envers l'environnement et la responsabilité sociale"
+      }
+    }
+  }
+}
