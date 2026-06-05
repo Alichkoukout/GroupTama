@@ -4,22 +4,28 @@ import { FiArrowRight, FiMapPin } from 'react-icons/fi'
 import { HiOutlineExternalLink } from 'react-icons/hi'
 import { useTranslation } from 'react-i18next'
 import useReveal from '../hooks/useReveal'
+import btpImage from '../images/btp_genie_civil.png'
+import energyImage from '../images/energie_solaire.png'
+import industryImage from '../images/global.png'
 
 const staticProjects = [
   {
     id: 1,
+    slug: 'btp',
     catColor: 'bg-blue-600',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80',
+    image: btpImage,
   },
   {
     id: 2,
+    slug: 'industry',
     catColor: 'bg-slate-700',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
+    image: industryImage,
   },
   {
     id: 3,
+    slug: 'energy',
     catColor: 'bg-amber-600',
-    image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80',
+    image: energyImage,
   },
 ]
 
@@ -28,7 +34,7 @@ function ProjectCard({ p, delay }) {
   return (
     <div className={`reveal delay-${delay} group relative rounded-3xl overflow-hidden cursor-pointer`}
          style={{ boxShadow: '0 4px 24px rgba(0,0,0,.1)', height: '420px' }}
-         onClick={() => navigate('/projects')}>
+         onClick={() => navigate(`/projects?category=${p.slug}`)}>
 
       {/* Image */}
       <img src={p.image} alt={p.title}
@@ -83,18 +89,14 @@ export default function Projects() {
   const navigate = useNavigate()
 
   const cardsFromLocale = t('projects.cards', { returnObjects: true })
-  const imageUrls = [
-    'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80',
-  ]
   const catColors = ['bg-blue-600', 'bg-slate-700', 'bg-amber-600']
 
   const projectsData = Object.values(cardsFromLocale).map((card, i) => ({
     ...card,
     id: i + 1,
-    catColor: catColors[i] || 'bg-slate-700',
-    image: imageUrls[i] || imageUrls[0],
+    slug: staticProjects[i]?.slug || 'all',
+    catColor: catColors[i] || staticProjects[i]?.catColor || 'bg-slate-700',
+    image: staticProjects[i]?.image || industryImage,
     action_view_more: t('projects.action_view_more'),
   }))
 

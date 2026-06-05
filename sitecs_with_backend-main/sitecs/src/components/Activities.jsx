@@ -1,48 +1,28 @@
 // src/components/Activities.jsx
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { MdConstruction, MdFactory, MdComputer, MdSolarPower, MdBuildCircle } from 'react-icons/md'
+import { Link, useNavigate } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next'
-import i18next from 'i18next'
-import frLocale from '../locales/fr.json'
 import useReveal from '../hooks/useReveal'
-
-const activityStyles = {
-  btp: {
-    icon: MdConstruction,
-    gradient: 'from-primary-600 to-primary-800',
-    iconBg: 'bg-primary-600/10 border-primary-600/20 text-primary-600'
-  },
-  transport: {
-    icon: MdFactory,
-    gradient: 'from-accent-600 to-accent-800',
-    iconBg: 'bg-accent-600/10 border-accent-600/20 text-accent-600'
-  },
-  industry: {
-    icon: MdBuildCircle,
-    gradient: 'from-tech-600 to-tech-800',
-    iconBg: 'bg-tech-600/10 border-tech-600/20 text-tech-600'
-  },
-  energy: {
-    icon: MdSolarPower,
-    gradient: 'from-orange-600 to-red-600',
-    iconBg: 'bg-orange-600/10 border-orange-600/20 text-orange-600'
-  },
-  tech: {
-    icon: MdComputer,
-    gradient: 'from-indigo-600 to-indigo-800',
-    iconBg: 'bg-indigo-600/10 border-indigo-600/20 text-indigo-600'
-  }
-}
+import { getActivities } from '../data/activityCatalog'
 
 function ActivityCard({ activity, delay, num }) {
   const { t } = useTranslation()
   const Icon = activity.icon
 
   return (
-    <div className={`reveal delay-${delay} group card-premium flex flex-col`}>
+    <article className={`reveal delay-${delay} group card-premium flex flex-col overflow-hidden`}>
+      <div className="relative h-44 overflow-hidden">
+        <img
+          src={activity.image}
+          alt={activity.title}
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary-950/65 via-primary-950/10 to-transparent" />
+      </div>
+
       <div className={`h-1 w-full bg-gradient-to-r ${activity.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
       <div className="p-8 flex flex-col h-full">
         <div className="flex items-start justify-between mb-6">
           <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 ${activity.iconBg}`}>
@@ -66,7 +46,7 @@ function ActivityCard({ activity, delay, num }) {
             <ul className="space-y-1 text-xs text-slate-600">
               {activity.points.map((point, idx) => (
                 <li key={idx} className="flex gap-2">
-                  <span className="text-amber-600">•</span>
+                  <span className="text-amber-600">&bull;</span>
                   <span>{point}</span>
                 </li>
               ))}
@@ -81,7 +61,7 @@ function ActivityCard({ activity, delay, num }) {
                   <ul className="space-y-1 text-xs text-slate-600">
                     {section.points.map((point, j) => (
                       <li key={j} className="flex gap-2">
-                        <span className="text-amber-600">•</span>
+                        <span className="text-amber-600">&bull;</span>
                         <span>{point}</span>
                       </li>
                     ))}
@@ -102,11 +82,14 @@ function ActivityCard({ activity, delay, num }) {
           ))}
         </div>
 
-        <div className="flex items-center gap-1.5 text-primary-700 text-sm font-bold opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+        <Link
+          to={`/activities#${activity.key}`}
+          className="flex items-center gap-1.5 text-primary-700 text-sm font-bold mt-auto transition-colors hover:text-amber-600"
+        >
           {t('activities.action_view_more')} <FiArrowRight className="text-xs" />
-        </div>
+        </Link>
       </div>
-    </div>
+    </article>
   )
 }
 
@@ -114,40 +97,7 @@ export default function Activities() {
   const { t } = useTranslation()
   const ref = useReveal()
   const navigate = useNavigate()
-
-  const activitiesData = t('activities.cards', { returnObjects: true }) || {}
-  const fallbackActivities = frLocale.activities?.cards || {}
-  const fallbackSolution = fallbackActivities.solutions || {
-    title: 'Solutions & Services',
-    sub: 'Des solutions techniques avancées :',
-    points: [
-      'Technologics industriclies',
-      'Réhabilitation d\'infrastructures',
-      'Modernisation d\'équipements',
-      'Ingénierie & conseil'
-    ],
-    conclusion: 'Nous améliorons la performance et la durabilité de vos installations.'
-  }
-
-  if (!activitiesData.solutions) {
-    if (fallbackActivities.solutions) {
-      activitiesData.solutions = fallbackActivities.solutions
-      console.info('[Activities] injecting solutions from fr locale fallback')
-    } else {
-      activitiesData.solutions = fallbackSolution
-      console.warn('[Activities] injecting manual fallback solutions card')
-    }
-  }
-
-  const preferredOrder = ['factory', 'construction', 'solar', 'computer', 'solutions']
-  const activityKeys = Object.keys(activitiesData)
-  const orderedActivityKeys = [
-    ...preferredOrder.filter(key => activityKeys.includes(key)),
-    ...activityKeys.filter(key => !preferredOrder.includes(key))
-  ]
-
-  console.log('[Activities] ordered card keys', orderedActivityKeys)
-
+  const activities = getActivities(t('activities.cards', { returnObjects: true }) || {})
 
   return (
     <section ref={ref} className="py-28 bg-slate-50 relative overflow-hidden">
@@ -167,24 +117,14 @@ export default function Activities() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {orderedActivityKeys.map((key, i) => {
-            const data = activitiesData[key]
-            const style = activityStyles[key] || {
-              icon: MdComputer,
-              gradient: 'from-gray-600 to-gray-800',
-              iconBg: 'bg-gray-600/10 border-gray-500/20 text-gray-600'
-            }
-            const entry = { ...style, ...data }
-
-            return (
-              <ActivityCard
-                key={key}
-                activity={entry}
-                delay={i * 100}
-                num={`0${i + 1}`}
-              />
-            )
-          })}
+          {activities.map((entry, i) => (
+            <ActivityCard
+              key={entry.key}
+              activity={entry}
+              delay={i * 100}
+              num={`0${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>

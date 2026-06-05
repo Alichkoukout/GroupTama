@@ -6,11 +6,12 @@ import useReveal from '../hooks/useReveal'
 
 // ── API endpoint — update this for production ──────────────────────────────
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+const MAP_URL = 'https://www.google.com/maps/search/?api=1&query=Malabo%2C%20Equatorial%20Guinea'
 
 const contactDetails = [
   { icon: FiPhone,  labelKey: 'contact.details.phone', value: ' +240 222 31 82 82 /  +212 601 28 19 50', href: 'tel:+240222318282' },
   { icon: FiMail,   labelKey: 'contact.details.email', value: 'contact@grouptama.com', href: 'mailto:contact@grouptama.com' },
-  { icon: FiMapPin, labelKey: 'contact.details.address', value: 'Malabo – Guinée Équatoriale', href: '#' },
+  { icon: FiMapPin, labelKey: 'contact.details.address', value: 'Malabo – Guinée Équatoriale', href: MAP_URL },
 ]
 
 const INITIAL = { name: '', email: '', phone: '', message: '' }
@@ -150,11 +151,11 @@ export default function Contact() {
               <p className="text-[.65rem] font-black uppercase tracking-widest text-slate-400 mb-3">{t('contact.follow_us')}</p>
               <div className="flex gap-3">
                 {[FiLinkedin, FiFacebook].map((Icon, i) => (
-                  <a key={i} href="#"
-                     className="w-11 h-11 bg-primary-900 hover:bg-amber-500 rounded-xl flex items-center justify-center
-                                text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <span key={i}
+                     className="w-11 h-11 bg-primary-900/60 rounded-xl flex items-center justify-center
+                                text-white/80 border border-white/10">
                     <Icon className="text-base" />
-                  </a>
+                  </span>
                 ))}
               </div>
             </div>

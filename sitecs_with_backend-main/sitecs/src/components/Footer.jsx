@@ -4,6 +4,8 @@ import { FiPhone, FiMail, FiMapPin, FiLinkedin, FiFacebook, FiTwitter, FiArrowRi
 import { useTranslation } from 'react-i18next'
 import TAMALogo from '../images/TAMAlogo.jpg'
 
+const MAP_URL = 'https://www.google.com/maps/search/?api=1&query=Malabo%2C%20Equatorial%20Guinea'
+
 const quickLinks = [
   { labelKey: 'nav.home',   to: '/' },
   { labelKey: 'nav.about',  to: '/about' },
@@ -70,12 +72,12 @@ export default function Footer() {
             </p>
             <div className="flex gap-2.5">
               {[FiLinkedin, FiFacebook, FiTwitter].map((Icon, i) => (
-                <a key={i} href="#"
-                   className="w-9 h-9 rounded-lg bg-white/[.06] hover:bg-amber-500
-                              flex items-center justify-center text-slate-300 hover:text-white
-                              transition-all duration-300 hover:-translate-y-0.5 border border-white/[.08] hover:border-amber-500">
+                <span key={i}
+                   className="w-9 h-9 rounded-lg bg-white/[.06]
+                              flex items-center justify-center text-slate-300
+                              border border-white/[.08]">
                   <Icon className="text-sm" />
-                </a>
+                </span>
               ))}
             </div>
           </div>
@@ -125,7 +127,7 @@ export default function Footer() {
               {[
                 { Icon: FiPhone,  text: '+240 222 31 82 82 /  +212 601 28 19 50', href: 'tel:+240222318282' },
                 { Icon: FiMail,   text: 'contact@grouptama.com',     href: 'mailto:contact@grouptama.com' },
-                { Icon: FiMapPin, text: 'Malabo – Guinée Équatoriale', href: '#' },
+                { Icon: FiMapPin, text: 'Malabo – Guinée Équatoriale', href: MAP_URL },
               ].map(({ Icon, text, href }) => (
                 <li key={text}>
                   <a href={href}

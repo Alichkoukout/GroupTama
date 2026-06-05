@@ -1,60 +1,163 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useSearchParams } from 'react-router-dom'
 import PageHero from '../components/PageHero'
-import { FiMapPin, FiArrowRight } from 'react-icons/fi'
+import { FiMapPin } from 'react-icons/fi'
 import useReveal from '../hooks/useReveal'
+import btpImage from '../images/btp_genie_civil.png'
+import energyImage from '../images/energie_solaire.png'
+import industryImage from '../images/global.png'
+import petroleumImage from '../images/petrole&stockage.png'
+import transportImage from '../images/port_transport.png'
+import techImage from '../images/tech.png'
+import tradingImage from '../images/trading_matiere_premiere.png'
 
 const projects = [
-  { id:1, cat:'Construction', color:'bg-blue-600',   title:'Complexe Résidentiel Malabo Nord',     location:'Malabo, Guinée Équatoriale', year:'2023', desc:'Construction d\'un complexe de 120 logements avec toutes les commodités modernes.',                   image:'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80' },
-  { id:2, cat:'Industrie',    color:'bg-slate-700',  title:'Usine de Transformation Alimentaire',  location:'Bata, Guinée Équatoriale',    year:'2022', desc:'Installation et mise en service d\'une usine avec systèmes automatisés.',                         image:'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80' },
-  { id:3, cat:'Énergie',      color:'bg-amber-600',  title:'Centrale Solaire 5 MWc',               location:'Afrique Centrale',            year:'2023', desc:'Conception et déploiement d\'une centrale photovoltaïque de 5 MWc pour 3 000 foyers.',           image:'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80' },
-  { id:4, cat:'Construction', color:'bg-blue-600',   title:'Immeuble de Bureaux Corporatifs',      location:'Malabo, Guinée Équatoriale',  year:'2021', desc:'Construction d\'un immeuble de bureaux de 8 étages certifié aux normes environnementales.',      image:'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80' },
-  { id:5, cat:'Tech',         color:'bg-indigo-700', title:'Système SCADA Réseau Eau',             location:'Cameroun',                    year:'2022', desc:'Déploiement d\'un système SCADA pour la gestion d\'un réseau de distribution d\'eau.',          image:'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80' },
-  { id:6, cat:'Énergie',      color:'bg-amber-600',  title:'Parc Éolien Côtier 24 MW',             location:'Gabon',                       year:'2023', desc:'Installation de 12 éoliennes pour une puissance totale de 24 MW en zone côtière.',             image:'https://images.unsplash.com/photo-1548337138-e87d889cc369?auto=format&fit=crop&w=800&q=80' },
+  {
+    id: 1,
+    slug: 'btp',
+    cat: 'G\u00e9nie Civil / BTP',
+    color: 'bg-blue-700',
+    title: 'Complexe residentiel Malabo Nord',
+    location: 'Malabo, Guin\u00e9e \u00c9quatoriale',
+    year: '2023',
+    desc: "Construction d'un complexe de logements avec voiries, reseaux et finitions adaptees aux standards corporatifs.",
+    image: btpImage,
+  },
+  {
+    id: 2,
+    slug: 'industry',
+    cat: 'Industrie / Sablage',
+    color: 'bg-zinc-700',
+    title: 'Maintenance et traitement anticorrosion',
+    location: 'Bata, Guin\u00e9e \u00c9quatoriale',
+    year: '2022',
+    desc: "Sablage, peinture industrielle et remise en etat d'equipements exposes aux environnements marins.",
+    image: industryImage,
+  },
+  {
+    id: 3,
+    slug: 'energy',
+    cat: '\u00c9nergie Verte',
+    color: 'bg-amber-600',
+    title: 'Centrale solaire photovoltaique',
+    location: 'Afrique Centrale',
+    year: '2023',
+    desc: "Conception et deploiement d'une solution solaire pour renforcer l'autonomie energetique de sites strategiques.",
+    image: energyImage,
+  },
+  {
+    id: 4,
+    slug: 'petroleum',
+    cat: 'P\u00e9trole & Stockage',
+    color: 'bg-slate-800',
+    title: 'Plateforme de stockage petrolier',
+    location: 'Zone portuaire',
+    year: '2024',
+    desc: 'Organisation des capacites de stockage, securisation des flux et maintenance des installations petrolieres.',
+    image: petroleumImage,
+  },
+  {
+    id: 5,
+    slug: 'transport',
+    cat: 'Port / Navire / Transport',
+    color: 'bg-cyan-700',
+    title: 'Operation logistique portuaire',
+    location: 'Golfe de Guin\u00e9e',
+    year: '2024',
+    desc: 'Coordination portuaire, transport terrestre lourd et affretement pour marchandises industrielles.',
+    image: transportImage,
+  },
+  {
+    id: 6,
+    slug: 'trading',
+    cat: 'Trading',
+    color: 'bg-emerald-700',
+    title: 'Approvisionnement en matieres premieres',
+    location: "Afrique de l'Ouest",
+    year: '2023',
+    desc: 'Sourcing et distribution de produits petroliers, minerais et engrais avec suivi qualite et logistique.',
+    image: tradingImage,
+  },
+  {
+    id: 7,
+    slug: 'tech',
+    cat: 'Tech / Digital',
+    color: 'bg-indigo-700',
+    title: 'Systeme digital de supervision',
+    location: 'Cameroun',
+    year: '2022',
+    desc: "Integration d'outils digitaux pour superviser les operations, centraliser les donnees et ameliorer la decision.",
+    image: techImage,
+  },
 ]
 
-const cats = ['Tous', 'Construction', 'Industrie', 'Énergie', 'Tech']
+const categories = [
+  { label: 'Tous', value: 'all' },
+  { label: 'BTP', value: 'btp' },
+  { label: 'Industrie', value: 'industry' },
+  { label: '\u00c9nergie', value: 'energy' },
+  { label: 'P\u00e9trole', value: 'petroleum' },
+  { label: 'Transport', value: 'transport' },
+  { label: 'Trading', value: 'trading' },
+  { label: 'Tech', value: 'tech' },
+]
 
 export default function ProjectsPage() {
-  const ref    = useReveal()
-  const [cat, setCat] = useState('Tous')
-  const list   = cat === 'Tous' ? projects : projects.filter(p => p.cat === cat)
+  const ref = useReveal()
+  const [searchParams, setSearchParams] = useSearchParams()
+  const selected = searchParams.get('category') || 'all'
+  const activeCategory = categories.some(category => category.value === selected) ? selected : 'all'
+  const list = activeCategory === 'all' ? projects : projects.filter(project => project.slug === activeCategory)
+
+  const setCategory = (value) => {
+    if (value === 'all') {
+      setSearchParams({})
+    } else {
+      setSearchParams({ category: value })
+    }
+  }
 
   return (
     <>
       <PageHero
         tag="Portfolio"
-        title="Nos Réalisations"
-        subtitle="Des projets ambitieux livrés avec excellence à travers l'Afrique."
-        image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
+        title="Nos R\u00e9alisations"
+        subtitle="Des projets ambitieux livr\u00e9s avec excellence a travers l'Afrique."
+        image={industryImage}
       />
 
       <section ref={ref} className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
-
-          {/* Filter tabs */}
           <div className="reveal flex flex-wrap gap-3 justify-center mb-14">
-            {cats.map(c => (
-              <button key={c} onClick={() => setCat(c)}
+            {categories.map(category => (
+              <button
+                key={category.value}
+                type="button"
+                onClick={() => setCategory(category.value)}
                 className={`px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-250 ${
-                  cat === c
+                  activeCategory === category.value
                     ? 'bg-primary-900 text-white shadow-lg shadow-primary-900/25'
                     : 'bg-white text-slate-500 border border-slate-200 hover:border-primary-300 hover:text-primary-800 hover:shadow-md'
-                }`}>
-                {c}
+                }`}
+              >
+                {category.label}
               </button>
             ))}
           </div>
 
-          {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {list.map((p, i) => (
-              <div key={p.id}
-                className={`reveal delay-${[0,100,200,0,100,200][i]} group card-premium cursor-pointer`}>
-
-                {/* Image */}
+              <article
+                id={`project-${p.id}`}
+                key={p.id}
+                className={`scroll-mt-28 reveal delay-${[0, 100, 200, 0, 100, 200, 0][i]} group card-premium`}
+              >
                 <div className="relative h-52 overflow-hidden">
-                  <img src={p.image} alt={p.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <span className={`absolute top-4 left-4 ${p.color} text-white text-[.63rem] font-black uppercase tracking-widest px-3 py-1.5 rounded-full`}>
                     {p.cat}
@@ -67,27 +170,20 @@ export default function ProjectsPage() {
                   </p>
                 </div>
 
-                {/* Body */}
                 <div className="p-7">
                   <h3 className="text-base font-black text-primary-900 mb-2 group-hover:text-primary-700 transition-colors">
                     {p.title}
                   </h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-5">{p.desc}</p>
-                  <div className="flex items-center gap-1.5 text-primary-700 text-sm font-bold
-                                  translate-x-0 group-hover:translate-x-1 transition-transform">
-                    Voir Plus <FiArrowRight className="text-xs" />
-                  </div>
+                  <p className="text-slate-500 text-sm leading-relaxed">{p.desc}</p>
                 </div>
 
-                {/* Bottom accent */}
-                <div className="h-[2px] bg-gradient-to-r from-amber-500 to-amber-600
-                                 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              </div>
+                <div className="h-[2px] bg-gradient-to-r from-amber-500 to-amber-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              </article>
             ))}
           </div>
 
           {list.length === 0 && (
-            <div className="text-center py-20 text-slate-400">Aucun projet dans cette catégorie.</div>
+            <div className="text-center py-20 text-slate-400">Aucun projet dans cette categorie.</div>
           )}
         </div>
       </section>
