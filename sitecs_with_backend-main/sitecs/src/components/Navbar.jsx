@@ -48,7 +48,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
           <div className="leading-none">
             <div className="text-white font-black text-[1.3rem] tracking-[.12em]">
-              Group<span className="text-primary-400">TAMA</span>
+              Groupe<span className="text-primary-400">TAMA</span>
             </div>
             <div className="text-[.5rem] font-semibold tracking-[.14em] text-slate-400 uppercase mt-0.5">
               {t('brand.tagline')}
