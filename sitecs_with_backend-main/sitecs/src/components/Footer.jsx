@@ -60,7 +60,7 @@ export default function Footer() {
               </div>
               <div>
                 <div className="text-white font-black text-xl tracking-[.12em]">
-                  Group<span className="text-primary-400">TAMA</span>
+                  Groupe<span className="text-primary-400">TAMA</span>
                 </div>
                 <div className="text-[.5rem] font-semibold tracking-[.14em] text-slate-500 uppercase">
                   {t('brand.tagline')}
