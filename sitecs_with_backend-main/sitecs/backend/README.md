@@ -83,7 +83,7 @@ Content-Type: application/json
 ```json
 {
   "name":    "Jean Dupont",
-  "email":   "jean@exemple.com",
+  "email":   "groupetama@outlook.com",
   "phone":   "+240 222 000 000",
   "message": "Bonjour, je souhaite un devis pour un projet de construction."
 }
@@ -104,7 +104,7 @@ Content-Type: application/json
   "data": {
     "id":        "Kp3mN7xQwRtY...",
     "name":      "Jean Dupont",
-    "email":     "jean@exemple.com",
+    "email":     "groupetama@outlook.com",
     "phone":     "+240 222 000 000",
     "message":   "Bonjour, je souhaite un devis...",
     "createdAt": "2025-01-15T10:30:00.000Z"
@@ -172,7 +172,7 @@ curl -X POST http://localhost:5000/api/contact \
   -H "Content-Type: application/json" \
   -d '{
     "name":    "Jean Dupont",
-    "email":   "jean@exemple.com",
+    "email":   "groupetama@outlook.com",
     "phone":   "+240 222 000 000",
     "message": "Bonjour, je souhaite un devis pour mon projet."
   }'
@@ -212,7 +212,7 @@ VITE_API_URL=https://your-api-domain.com
    NODE_ENV=production
    ALLOWED_ORIGINS=https://sitecs.vercel.app
    FIREBASE_PROJECT_ID=your-project-id
-   FIREBASE_CLIENT_EMAIL=firebase-adminsdk@your-project.iam.gserviceaccount.com
+   FIREBASE_CLIENT_EMAIL=groupetama@outlook.com
    FIREBASE_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----\n...\n-----END RSA PRIVATE KEY-----\n"
    ```
 3. Set start command: `npm start`

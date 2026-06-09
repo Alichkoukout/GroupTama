@@ -30,7 +30,7 @@ export const activityCatalog = {
   petroleum: {
     title: 'P\u00e9trole & Stockage',
     sub: 'Infrastructures p\u00e9trolieres et stockage s\u00e9curis\u00e9',
-    text: 'GroupTama accompagne les op\u00e9rations p\u00e9trolieres avec des solutions de stockage, de manutention et de maintenance adapt\u00e9es aux exigences industrielles.',
+    text: 'GroupeTama accompagne les op\u00e9rations p\u00e9trolieres avec des solutions de stockage, de manutention et de maintenance adapt\u00e9es aux exigences industrielles.',
     points: [
       'Stockage et gestion de produits p\u00e9troliers',
       "Maintenance d'installations et \u00e9quipements p\u00e9troliers",
@@ -66,7 +66,7 @@ export const activityCatalog = {
   industry: {
     title: 'Industrie / Sablage',
     sub: 'Services industriels, traitement de surface et protection',
-    text: 'GroupTama intervient sur les installations industrielles avec des prestations de sablage, peinture anticorrosion, fabrication et maintenance.',
+    text: 'GroupeTama intervient sur les installations industrielles avec des prestations de sablage, peinture anticorrosion, fabrication et maintenance.',
     points: [
       'Sablage et preparation de surface',
       'Peinture industrielle anticorrosion',
@@ -102,7 +102,7 @@ export const activityCatalog = {
   energy: {
     title: '\u00c9nergie Verte / Photovolta\u00efque',
     sub: 'Solutions solaires et \u00e9nergie renouvelable',
-    text: "GroupTama d\u00e9veloppe des solutions photovolta\u00efques et hybrides pour r\u00e9duire les couts \u00e9nerg\u00e9tiques et renforcer l'autonomie des sites.",
+    text: "GroupeTama d\u00e9veloppe des solutions photovolta\u00efques et hybrides pour r\u00e9duire les couts \u00e9nerg\u00e9tiques et renforcer l'autonomie des sites.",
     points: [
       '\u00c9tudes et installation de centrales solaires',
       "Systemes hybrides et stockage d'\u00e9nergie",
@@ -138,7 +138,7 @@ export const activityCatalog = {
   tech: {
     title: 'Tech / Digital',
     sub: 'Digitalisation, automatisation et int\u00e9gration IT',
-    text: "GroupTama modernise les operations par des solutions digitales, des systemes de supervision et des outils d'aide a la decision.",
+    text: "GroupeTama modernise les operations par des solutions digitales, des systemes de supervision et des outils d'aide a la decision.",
     points: [
       'Automatisation industrielle et supervision',
       'Integration IT et outils metiers',

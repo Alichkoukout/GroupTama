@@ -1,7 +1,7 @@
 {
   "hero": {
     "badge": "Leader en Solutions Industrielles Africaines",
-    "title": "GroupTama : Votre Partenaire Global en Innovation Industrielle",
+    "title": "GroupeTama : Votre Partenaire Global en Innovation Industrielle",
     "subtitle": "Solutions intégrées de la conception à la livraison — pour un avenir industriel durable, innovant et ambitieux.",
     "cta_contact": "Contactez-nous",
     "cta_projects": "Nos Réalisations",
@@ -63,7 +63,7 @@
   "activities": {
     "section_tag": "Nos Domaines d'Excellence",
     "title": "Nos Activités",
-    "subtitle": "GroupTama opère dans cinq secteurs industriels clés pour transformer les projets en réalité et propulser votre entreprise vers le succès.",
+    "subtitle": "GroupeTama opère dans cinq secteurs industriels clés pour transformer les projets en réalité et propulser votre entreprise vers le succès.",
     "cta_view_all": "Voir toutes les activités",
     "action_view_more": "En savoir plus",
     "cards": {
@@ -165,7 +165,7 @@
   },
 
   "footer": {
-    "description": "GroupTama est un groupe industriel intégré spécialisé dans le BTP, le transport, les services industriels, l'énergie et la technologie en Afrique.",
+    "description": "GroupeTama est un groupe industriel intégré spécialisé dans le BTP, le transport, les services industriels, l'énergie et la technologie en Afrique.",
     "quick_links": "Liens Rapides",
     "services_title": "Nos Services",
     "contact": "Contact",
@@ -182,10 +182,10 @@
 
   "contact": {
     "section_tag": "Nous Joindre",
-    "title": "Contactez GroupTama",
+    "title": "Contactez GroupeTama",
     "subtitle": "Notre équipe est prête à étudier votre projet et vous proposer la meilleure solution innovante.",
     "info_title": "Informations de Contact",
-    "info_description": "GroupTama est un groupe industriel intégré spécialisé dans le BTP, le transport, les services industriels, l'énergie et la technologie.",
+    "info_description": "GroupeTama est un groupe industriel intégré spécialisé dans le BTP, le transport, les services industriels, l'énergie et la technologie.",
     "follow_us": "Suivez-nous",
     "map_location": "Afrique",
 
@@ -194,7 +194,7 @@
       "+212 601 28 19 50"
     ],
 
-    "email": "contact@grouptama.com",
+    "email": "groupetama@outlook.com",
 
     "details": {
       "phone": "Téléphone",
@@ -217,7 +217,7 @@
       "header": "Envoyez-nous un message",
       "subheader": "Nous vous répondrons dans les 24 heures.",
       "placeholder_name": "Jean Dupont",
-      "placeholder_email": "jean@exemple.com",
+      "placeholder_email": "groupetama@outlook.com",
       "placeholder_phone": "+240 222 000 000",
       "placeholder_message": "Décrivez votre projet ou posez votre question…",
       "submit": "Envoyer le message",
@@ -229,14 +229,14 @@
 
   "about": {
     "section_tag": "Qui Sommes-Nous",
-    "title": "À Propos de GroupTama",
-    "subtitle": "GroupTama allie expertise locale et standards internationaux pour des projets d'excellence.",
-    "content": "Fondé sur des principes de qualité, d'innovation et de durabilité, GroupTama est un leader reconnu des solutions industrielles intégrées en Afrique.",
+    "title": "À Propos de GroupeTama",
+    "subtitle": "GroupeTama allie expertise locale et standards internationaux pour des projets d'excellence.",
+    "content": "Fondé sur des principes de qualité, d'innovation et de durabilité, GroupeTama est un leader reconnu des solutions industrielles intégrées en Afrique.",
     "mission": "Notre mission est de transformer les défis industriels en opportunités de croissance."
   },
 
   "why_choose_us": {
-    "section_tag": "Pourquoi GroupTama",
+    "section_tag": "Pourquoi GroupeTama",
     "title": "Nos Avantages Compétitifs",
     "cards": {
       "1": {

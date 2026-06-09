@@ -109,7 +109,7 @@ Each submission creates a document in the `contacts` collection:
 ```json
 {
   "name":      "Jean Dupont",
-  "email":     "jean@exemple.com",
+  "email":     "groupetama@outlook.com",
   "phone":     "+240 222 000 000",
   "message":   "Bonjour, je souhaite un devis...",
   "createdAt": "<Firebase Timestamp>"

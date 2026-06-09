@@ -11,11 +11,11 @@ const values = [
 ]
 
 const timeline = [
-  { year: '2008', title: 'Fondation', event: 'Création de GroupTama à Malabo, Guinée Équatoriale.' },
+  { year: '2008', title: 'Fondation', event: 'Création de GroupeTama à Malabo, Guinée Équatoriale.' },
   { year: '2011', title: 'Expansion', event: 'Développement de Tama BTP et Tama Transport.' },
   { year: '2015', title: 'Énergie',   event: 'Lancement de Tama Energy - Énergies Renouvelables.' },
   { year: '2018', title: 'Tech',      event: 'Création de Tama Tech - Solutions Technologiques.' },
-  { year: '2023', title: 'Afrique',   event: 'GroupTama établi dans 8 pays africains avec 200+ projets.' },
+  { year: '2023', title: 'Afrique',   event: 'GroupeTama établi dans 8 pays africains avec 200+ projets.' },
 ]
 
 const highlights = [
@@ -34,8 +34,8 @@ export default function About() {
     <>
       <PageHero
         tag="Notre histoire"
-        title="À Propos de GroupTama"
-        subtitle="Depuis 2008, GroupTama bâtit l'avenir industriel et énergétique de l'Afrique avec rigueur et passion."
+        title="À Propos de GroupeTama"
+        subtitle="Depuis 2008, GroupeTama bâtit l'avenir industriel et énergétique de l'Afrique avec rigueur et passion."
         image="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
       />
 
@@ -48,7 +48,7 @@ export default function About() {
               <span className="section-tag">Notre mission</span>
               <h2 className="section-title">Bâtir l'Afrique de Demain</h2>
               <p className="text-slate-500 leading-relaxed mb-4">
-                GroupTama est un groupe industriel intégré spécialisé dans le BTP, le transport, les services industriels, l'énergie et la technologie. Avec une présence dans 8 pays africains, nos cinq divisions (Tama BTP, Tama Transport, Tama Industry, Tama Energy et Tama Tech) réalisent des projets complexes en combinant expertise locale et standards internationaux.
+                GroupeTama est un groupe industriel intégré spécialisé dans le BTP, le transport, les services industriels, l'énergie et la technologie. Avec une présence dans 8 pays africains, nos cinq divisions (Tama BTP, Tama Transport, Tama Industry, Tama Energy et Tama Tech) réalisent des projets complexes en combinant expertise locale et standards internationaux.
               </p>
               <p className="text-slate-500 leading-relaxed mb-8">
                 Notre approche intégrée — de la conception à la livraison — garantit des solutions sur
@@ -69,7 +69,7 @@ export default function About() {
 
             <div className="reveal-right relative">
               <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-                   alt="GroupTama en action"
+                   alt="GroupeTama en action"
                    className="rounded-3xl shadow-2xl w-full h-96 object-cover" />
               {/* Floating stat */}
               <div className="absolute -bottom-6 -left-6 bg-amber-500 text-white rounded-2xl p-6 shadow-2xl">
@@ -120,7 +120,7 @@ export default function About() {
         <div className="max-w-5xl mx-auto px-4 sm:px-8 lg:px-16">
           <div className="text-center mb-16 reveal">
             <span className="section-tag !text-amber-400 justify-center">Notre parcours</span>
-            <h2 className="section-title !text-white text-center">Histoire de GroupTama</h2>
+            <h2 className="section-title !text-white text-center">Histoire de GroupeTama</h2>
           </div>
 
           <div className="relative">

@@ -6,7 +6,7 @@ import useReveal from '../hooks/useReveal'
 
 const cards = [
   { icon: FiPhone,  title: 'Téléphone', lines: ['+240 222 000 000', '+240 333 000 000'],        color: 'bg-blue-600' },
-  { icon: FiMail,   title: 'Email',     lines: ['contact@grouptama.com', 'devis@grouptama.com'],       color: 'bg-amber-500' },
+  { icon: FiMail,   title: 'Email',     lines: ['groupetama@outlook.com', 'groupetama@outlook.com'],       color: 'bg-amber-500' },
   { icon: FiMapPin, title: 'Adresse',   lines: ['Malabo, Guinée Équatoriale', 'Afrique Centrale'], color: 'bg-teal-600' },
   { icon: FiClock,  title: 'Horaires',  lines: ['Lun – Ven : 08h – 18h', 'Sam : 09h – 13h'],   color: 'bg-slate-700' },
 ]

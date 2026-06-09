@@ -1,7 +1,7 @@
 {
   "hero": {
     "badge": "Proveedor Líder de Soluciones Industriales Africanas",
-    "title": "GroupTama: Su Socio Global en Innovación Industrial",
+    "title": "GroupeTama: Su Socio Global en Innovación Industrial",
     "subtitle": "Soluciones integradas desde el diseño hasta la entrega — para un futuro industrial sostenible, innovador y ambicioso.",
     "cta_contact": "Contáctenos",
     "cta_projects": "Nuestros Logros",
@@ -59,7 +59,7 @@
   "activities": {
     "section_tag": "Nuestras Áreas de Excelencia",
     "title": "Nuestras Actividades",
-    "subtitle": "GroupTama opera en cinco sectores industriales clave para transformar proyectos en realidad e impulsar su negocio hacia el éxito.",
+    "subtitle": "GroupeTama opera en cinco sectores industriales clave para transformar proyectos en realidad e impulsar su negocio hacia el éxito.",
     "cta_view_all": "Ver todas las actividades",
     "action_view_more": "Aprende más",
     "cards": {
@@ -156,7 +156,7 @@
     }
   },
   "footer": {
-    "description": "GroupTama es un grupo industrial integrado especializado en construcción, transporte, servicios industriales, energía y tecnología en África.",
+    "description": "GroupeTama es un grupo industrial integrado especializado en construcción, transporte, servicios industriales, energía y tecnología en África.",
     "quick_links": "Enlaces Rápidos",
     "services_title": "Nuestros Servicios",
     "contact": "Contacto",
@@ -172,17 +172,17 @@
   },
   "contact": {
     "section_tag": "Contáctenos",
-    "title": "Contacte a GroupTama",
+    "title": "Contacte a GroupeTama",
     "subtitle": "Nuestro equipo está listo para estudiar su proyecto y proponer la mejor solución innovadora.",
     "info_title": "Información de Contacto",
-    "info_description": "GroupTama es un grupo industrial integrado especializado en construcción, transporte, servicios industriales, energía y tecnología.",
+    "info_description": "GroupeTama es un grupo industrial integrado especializado en construcción, transporte, servicios industriales, energía y tecnología.",
     "follow_us": "Síguenos",
     "map_location": "África",
     "phones": [
       "+240 222 31 82 82",
       "+212 601 28 19 50"
     ],
-    "email": "contact@grouptama.com",
+    "email": "groupetama@outlook.com",
     "details": {
       "phone": "Teléfono",
       "email": "Correo electrónico",
@@ -202,7 +202,7 @@
       "header": "Envíanos un mensaje",
       "subheader": "Te responderemos dentro de 24 horas.",
       "placeholder_name": "Juan Pérez",
-      "placeholder_email": "juan@ejemplo.com",
+      "placeholder_email": "groupetama@outlook.com",
       "placeholder_phone": "+240 222 000 000",
       "placeholder_message": "Describe tu proyecto o haz tu pregunta…",
       "submit": "Enviar mensaje",
@@ -213,13 +213,13 @@
   },
   "about": {
     "section_tag": "Quiénes Somos",
-    "title": "Acerca de GroupTama",
-    "subtitle": "GroupTama combina experiencia local y estándares internacionales para proyectos excepcionales.",
-    "content": "Fundada sobre principios de calidad, innovación y sostenibilidad, GroupTama es un líder reconocido en soluciones industriales integradas en África.",
+    "title": "Acerca de GroupeTama",
+    "subtitle": "GroupeTama combina experiencia local y estándares internacionales para proyectos excepcionales.",
+    "content": "Fundada sobre principios de calidad, innovación y sostenibilidad, GroupeTama es un líder reconocido en soluciones industriales integradas en África.",
     "mission": "Nuestra misión es transformar los desafíos industriales en oportunidades de crecimiento."
   },
   "why_choose_us": {
-    "section_tag": "Por Qué GroupTama",
+    "section_tag": "Por Qué GroupeTama",
     "title": "Nuestras Ventajas Competitivas",
     "cards": {
       "1": {

@@ -56,7 +56,7 @@ export default function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-3 mb-5 group">
               <div className="h-10 overflow-hidden flex-shrink-0">
-                <img src={TAMALogo} alt="GroupTama" className="h-full w-auto object-cover" />
+                <img src={TAMALogo} alt="GroupeTama" className="h-full w-auto object-cover" />
               </div>
               <div>
                 <div className="text-white font-black text-xl tracking-[.12em]">
@@ -126,7 +126,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {[
                 { Icon: FiPhone,  text: '+240 222 31 82 82 /  +212 601 28 19 50', href: 'tel:+240222318282' },
-                { Icon: FiMail,   text: 'contact@grouptama.com',     href: 'mailto:contact@grouptama.com' },
+                { Icon: FiMail,   text: 'groupetama@outlook.com',     href: 'mailto:groupetama@outlook.com' },
                 { Icon: FiMapPin, text: 'Malabo – Guinée Équatoriale', href: MAP_URL },
               ].map(({ Icon, text, href }) => (
                 <li key={text}>
@@ -147,7 +147,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[.07] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-xs font-medium">
-            © {new Date().getFullYear()} GroupTama — {t('footer.copyright')}
+            © {new Date().getFullYear()} GroupeTama — {t('footer.copyright')}
           </p>
           <p className="text-slate-600 text-xs">
             {t('footer.tagline')}

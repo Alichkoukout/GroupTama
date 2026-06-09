@@ -31,7 +31,7 @@ export default function ActivitiesPage() {
       <PageHero
         tag="Secteurs d'intervention"
         title="Nos Activites"
-        subtitle="GroupTama opere dans sept secteurs industriels cles pour transformer les projets en realite."
+        subtitle="GroupeTama opere dans sept secteurs industriels cles pour transformer les projets en realite."
         image={heroImage}
       />
 

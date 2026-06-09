@@ -10,7 +10,7 @@ const MAP_URL = 'https://www.google.com/maps/search/?api=1&query=Malabo%2C%20Equ
 
 const contactDetails = [
   { icon: FiPhone,  labelKey: 'contact.details.phone', value: ' +240 222 31 82 82 /  +212 601 28 19 50', href: 'tel:+240222318282' },
-  { icon: FiMail,   labelKey: 'contact.details.email', value: 'contact@grouptama.com', href: 'mailto:contact@grouptama.com' },
+  { icon: FiMail,   labelKey: 'contact.details.email', value: 'groupetama@outlook.com', href: 'mailto:groupetama@outlook.com' },
   { icon: FiMapPin, labelKey: 'contact.details.address', value: 'Malabo – Guinée Équatoriale', href: MAP_URL },
 ]
 
